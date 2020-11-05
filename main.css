@@ -1,0 +1,99 @@
+:root {
+    --free-color: #e6eeff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100%;
+}
+
+header {
+    padding: 20px;
+}
+
+.main {
+    margin: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input[type="text"] {
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+header button {
+    padding: 8px 24px;
+    margin: 0;
+    position: relative;
+    top: -2px;
+}
+
+select {
+    padding: 10px;
+}
+
+.container {
+    display: flex;
+    border: 2px solid darkgrey;
+    width: 300px;
+    margin: 5px;
+    flex-grow: 1;
+}
+
+.container > div {
+    text-align: center;
+    /* width: 300px; */
+    flex-grow: 1;
+    border-right: 1px solid #999;
+}
+
+.container > div:last-child {
+    border-right: 0;
+}
+
+.container > div div {
+    padding: 15px 10px;
+    font-size: 1.2em;
+}
+
+.container > div div:first-child {
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.container > div div:nth-child(odd) {
+    background: #eee;
+}
+
+.container > div:nth-child(3) > div:nth-child(4) {
+    background: var(--free-color);
+}
+
+section {
+    width: 80%;
+    padding: 20px 30px;
+}
+
+section span {
+    font-size: 1.4em;
+    background: #eee;
+    margin: 2px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+section span:hover {
+    background: #999;
+}
+
+.selected {
+    background: red !important;
+    color: white;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <header>
+        <input type="text" placeholder="Enter Value" id="inputField" onkeydown="onKeyDownInput(event)">
+        <button type="button" id="btnEnter">Enter</button>
+        <select onchange="onSelectCards(event.target.value)">
+            <option disabled selected>Select Number of Cards</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <button type="button" onclick="onShuffle()" id="btnShuffle">Shuffle</button>
+    </header>
+
+    <section></section>
+
+    <div class="main"></div>
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
