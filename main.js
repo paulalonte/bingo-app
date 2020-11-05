@@ -4,6 +4,7 @@ const inputField = document.getElementById('inputField');
 const btnEnter = document.getElementById('btnEnter');
 const btnShuffle = document.getElementById('btnShuffle');
 const section = document.getElementsByTagName('section')[0];
+const sndEffect = document.getElementById('sndEffect');
 
 
 let numberOfCards = 0;
@@ -56,6 +57,7 @@ function selectItem() {
         for(node of arrayNodes) {
             if(node.innerText === inputField.value.trim()) {
                 node.setAttribute('class', 'selected');
+                sndEffect.play();
             }
         }
     }
@@ -82,6 +84,7 @@ function deleteItem(el) {
         for(node of arrayNodes) {
             if(node.innerText === valueText) {
                 node.removeAttribute('class');
+                sndEffect.play();
             }
         }
     }
